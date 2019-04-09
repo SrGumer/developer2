@@ -1,0 +1,7 @@
+select xmlelement("empleado",
+					xmlattributes(num_emp AS "id", nombre AS "nombre"),
+					xmlelement("puesto", puesto),
+					xmlelement("salario", salario),
+					xmlelement("departamento", num_dep))
+from empleado
+where num_emp between 1010 and 1013;					
